@@ -1,0 +1,273 @@
+:root {
+  --color-black-light: #333;
+  --color-grey-light: #dddcdc;
+  --color-yellow: #fcbf1e;
+  --color-orange: #ef962d;
+  --features-svg-size: 5rem; }
+
+/************
+
+Breakpoints
+
+600px - phone
+900px - tablet
+1100 - 1200px - normal screen
+1800+ - big desktop
+
+*************/
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 68.75%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: var(--color-black-light);
+  box-sizing: border-box;
+  background-color: var(--color-grey-light); }
+
+.heading-primary {
+  font-size: 3.6rem; }
+  @media (max-width: 56.25em) {
+    .heading-primary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-primary {
+      font-size: 2.8rem; } }
+
+.heading-secondary {
+  color: black;
+  font-size: 2.4rem; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 1.8rem; } }
+
+.paragraph {
+  font-size: 1.6rem; }
+  @media (max-width: 56.25em) {
+    .paragraph {
+      font-size: 1.5rem; } }
+  @media (max-width: 37.5em) {
+    .paragraph {
+      font-size: 1.4rem; } }
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto; }
+  @media (max-width: 56.25em) {
+    .container {
+      max-width: 70rem; } }
+  @media (max-width: 37.5em) {
+    .container {
+      max-width: 50rem; } }
+
+/******  Header section  *****/
+.logo {
+  width: 30rem; }
+  @media (max-width: 56.25em) {
+    .logo {
+      width: 28rem;
+      margin-bottom: 3rem; } }
+  @media (max-width: 37.5em) {
+    .logo {
+      width: 28rem;
+      margin-bottom: 1.5rem; } }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1.5rem; }
+  @media (max-width: 56.25em) {
+    .header {
+      flex-direction: column; } }
+  @media (max-width: 37.5em) {
+    .header {
+      flex-direction: column; } }
+
+/******  Navigation  *****/
+.navigation {
+  align-self: stretch; }
+  @media (max-width: 56.25em) {
+    .navigation {
+      align-self: center; } }
+  @media (max-width: 37.5em) {
+    .navigation {
+      align-self: center; } }
+  .navigation__list {
+    list-style-type: none;
+    display: flex; }
+  .navigation__item {
+    margin: 0 4rem; }
+    @media (max-width: 37.5em) {
+      .navigation__item {
+        margin: 0 2rem; } }
+  .navigation__link:link, .navigation__link:visited {
+    text-decoration: none;
+    color: var(--color-black-light);
+    padding-bottom: .8rem;
+    transition: all .2s; }
+  .navigation__link:hover {
+    border-bottom: 3px solid currentColor; }
+
+/******  Product Overview Section  *****/
+.product-overview {
+  padding: 4rem;
+  text-align: center; }
+
+.form {
+  margin-top: 2rem;
+  text-align: center; }
+  .form__input {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 40rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.4rem; }
+
+.btn {
+  display: block;
+  padding: .5em 4rem;
+  border: none;
+  background: var(--color-yellow);
+  border-radius: 3px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s;
+  margin: 2rem auto; }
+  .btn:hover {
+    transform: translateY(-5px); }
+
+/****** Featues Section *****/
+.features__card {
+  display: flex; }
+  .features__card:not(:last-child) {
+    margin-bottom: 4rem; }
+  @media (max-width: 56.25em) {
+    .features__card {
+      width: 45rem;
+      margin: 0 auto; } }
+  @media (max-width: 37.5em) {
+    .features__card {
+      width: 50rem; } }
+
+.features__icon {
+  width: var(--features-svg-size);
+  height: var(--features-svg-size);
+  margin-right: 6rem;
+  fill: var(--color-orange); }
+  @media (max-width: 56.25em) {
+    .features__icon {
+      width: 5rem;
+      height: 5rem;
+      margin-right: 3rem; } }
+  @media (max-width: 37.5em) {
+    .features__icon {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 2.5rem; } }
+
+#product-video {
+  max-width: 60rem;
+  margin: 10rem auto; }
+  @media (max-width: 56.25em) {
+    #product-video {
+      max-width: 40rem;
+      transform: translateX(-5rem); } }
+  @media (max-width: 37.5em) {
+    #product-video {
+      display: none; } }
+
+/***** Pricing Section *****/
+.pricing {
+  padding-bottom: 10rem;
+  display: flex; }
+  @media (max-width: 56.25em) {
+    .pricing {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10rem; } }
+  @media (max-width: 37.5em) {
+    .pricing {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10rem; } }
+  .pricing__card {
+    flex: 0 0 30%;
+    background: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.23);
+    margin: 0 2rem;
+    text-align: center; }
+    @media (max-width: 56.25em) {
+      .pricing__card {
+        width: 45rem;
+        margin: 2rem 0; } }
+    @media (max-width: 37.5em) {
+      .pricing__card {
+        width: 50rem;
+        margin: 2rem 0; } }
+  .pricing__title {
+    background: var(--color-black-light);
+    color: var(--color-grey-light);
+    padding: 1rem; }
+  .pricing__rate {
+    font-size: 3.2rem;
+    margin-bottom: .8rem; }
+  .pricing__content {
+    padding: 2.5rem; }
+
+.footer {
+  padding: 2rem;
+  background-color: var(--color-black-light); }
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    @media (max-width: 37.5em) {
+      .footer__content {
+        align-items: center; } }
+  .footer__list {
+    list-style-type: none;
+    display: flex; }
+    @media (max-width: 37.5em) {
+      .footer__list {
+        flex-direction: column; } }
+  .footer__item:not(:last-child) {
+    margin-right: 1.4rem; }
+  @media (max-width: 37.5em) {
+    .footer__item {
+      margin: 1rem 0; } }
+  .footer__link:link, .footer__link:visited {
+    text-decoration: none;
+    color: whitesmoke; }
+  .footer__copyright {
+    color: whitesmoke;
+    font-size: 1.4rem;
+    margin-top: 5px; }
+    @media (max-width: 37.5em) {
+      .footer__copyright {
+        margin-top: 10px;
+        font-size: 1.6rem; } }

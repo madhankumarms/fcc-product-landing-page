@@ -1,0 +1,14 @@
+{
+  "name": "product-landing-page",
+  "version": "1.0.0",
+  "description": "a freeCodeCamp product landing page project",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "author": "Madhan Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.0"
+  }
+}
