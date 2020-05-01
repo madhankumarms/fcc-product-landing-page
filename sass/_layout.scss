@@ -55,12 +55,24 @@
     &__link:visited {
         text-decoration: none;
         color: var(--color-black-light);
-        padding-bottom: .8rem;
-        transition: all .2s;
+        padding-bottom: 1rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            height: 3px;
+            width: 0%;
+            border-radius: 5px;
+            transition: width .3s;
+        }
     }
 
-    &__link:hover {
-        border-bottom: 3px solid currentColor;
+    &__link:hover::after {
+            width: 100%;
     }
 }
 
@@ -128,7 +140,6 @@
 
         @include respond(phone) {
             width: 50rem;
-            font-size: 2rem !important;
         }
 
         @include respond(phone-md){
