@@ -41,6 +41,9 @@ body {
   color: var(--color-black-light);
   box-sizing: border-box;
   background-color: var(--color-grey-light); }
+  @media (max-width: 37.5em) {
+    body {
+      font-size: 1.8rem; } }
 
 .heading-primary {
   font-size: 3.6rem; }
@@ -157,6 +160,9 @@ body {
   margin: 2rem auto; }
   .btn:hover {
     transform: translateY(-5px); }
+  @media (max-width: 37.5em) {
+    .btn {
+      font-size: 1.8rem; } }
 
 /****** Featues Section *****/
 .features__card {
@@ -169,7 +175,8 @@ body {
       margin: 0 auto; } }
   @media (max-width: 37.5em) {
     .features__card {
-      width: 50rem; } }
+      width: 50rem;
+      font-size: 2rem !important; } }
   @media (max-width: 23.45em) {
     .features__card {
       width: 40rem; } }

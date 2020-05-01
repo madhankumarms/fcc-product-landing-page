@@ -63,6 +63,10 @@ body {
     color: var(--color-black-light);
     box-sizing: border-box;
     background-color: var(--color-grey-light);
+
+    @include respond(phone){
+        font-size: 1.8rem;
+    }
 }
 
 .heading-primary {

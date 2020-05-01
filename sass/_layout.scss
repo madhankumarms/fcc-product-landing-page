@@ -102,6 +102,10 @@
     &:hover {
         transform: translateY(-5px);
     }
+
+    @include respond(phone){
+        font-size: 1.8rem;
+    }
 }
 
 
@@ -124,6 +128,7 @@
 
         @include respond(phone) {
             width: 50rem;
+            font-size: 2rem !important;
         }
 
         @include respond(phone-md){
