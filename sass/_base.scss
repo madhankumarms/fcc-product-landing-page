@@ -10,6 +10,7 @@
 
 Breakpoints
 
+375px - phone-md
 600px - phone
 900px - tablet
 1100 - 1200px - normal screen
@@ -18,6 +19,11 @@ Breakpoints
 *************/
 
 @mixin respond($bp){
+
+    @if $bp == phone-md {
+		@media (max-width: 23.45em){ @content; }
+    }
+
 	@if $bp == phone {
 		@media (max-width: 37.5em){ @content; }
     }

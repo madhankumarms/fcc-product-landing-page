@@ -23,9 +23,9 @@
     @include respond(tablet){
         flex-direction: column;
     }
-    
-    @include respond(phone){
-        flex-direction: column;
+
+    @include respond(phone-md){
+        border-bottom: 1px solid #333;
     }
 }
 
@@ -35,10 +35,6 @@
     align-self: stretch;
 
     @include respond(tablet){
-        align-self: center;
-    }
-
-    @include respond(phone){
         align-self: center;
     }
 
@@ -87,7 +83,7 @@
         width: 40rem;
         border: none;
         border-radius: 4px;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -128,6 +124,10 @@
 
         @include respond(phone) {
             width: 50rem;
+        }
+
+        @include respond(phone-md){
+            width: 40rem;
         }
     }
 
@@ -179,12 +179,6 @@
         margin-top: 10rem;
     }
 
-    @include respond(phone){
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10rem;
-    }
-
     &__card {
         flex: 0 0 30%;
         background: whitesmoke;
@@ -200,7 +194,10 @@
 
         @include respond(phone){
             width: 50rem;
-            margin: 2rem 0;
+        }
+
+        @include respond(phone-md){
+            width: 40rem;
         }
     }
 
